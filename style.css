@@ -1,0 +1,147 @@
+
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    top:0;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 0 2rem;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo {
+    font-size: 2rem;
+}
+
+.toggle {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    width: 550px;
+    align-items: center;
+    list-style: none;
+    justify-content:space-between;
+
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+   
+}
+
+.btn {
+    border: 0;
+    background-color: #6D9F82;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn.btn-secondary {
+    background: transparent;
+    border: 2px solid #6D9F82;
+    color: #fff;
+    
+
+}
+
+
+
+.dark {
+    height: 100vh;
+    background: url('dark.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media all and (max-width: 991px) {
+
+    .header {
+        background: transparent;
+    }
+    .toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 20;
+    }
+
+    .logo {
+        position: relative;
+        z-index: 20;
+    }
+
+    .toggle .ouvrir {
+        display: block;
+    }
+
+    .toggle .fermer {
+        display: none;
+    }
+
+    .open .ouvrir {
+        display: none;
+    }
+
+    .open .fermer {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        flex-direction: column;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        transition: transform 1s;
+    }
+
+    .menu li a {
+        font-size: 2rem;
+        padding: 2rem;
+    }
+
+    .btn {
+        font-size: 2rem;
+        cursor: pointer;
+        
+    }
+
+    .open .menu {
+        transform: translateX(0);
+    }
+}
